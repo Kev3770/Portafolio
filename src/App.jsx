@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
+import WhyLandingPage from './components/WhyLandingPage/WhyLandingPage';
 import Services from './components/Services/Services';
 import LaunchOffer from './components/LaunchOffer/LaunchOffer';
 import Technologies from './components/Technologies/Technologies';
@@ -16,6 +17,7 @@ function App() {
     <div className="App">
       <Header />
       <Hero />
+      <WhyLandingPage />
       <Services />
       <LaunchOffer />
       <Technologies />

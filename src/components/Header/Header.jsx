@@ -42,7 +42,7 @@ const Header = () => {
 
           {/* CTA MÁS AGRESIVO */}
           <a 
-            href="https://wa.me/573001234567?text=Hola, quiero una landing page para mi negocio" 
+            href="https://wa.me/573113834058?text=Hola, quiero una landing page para mi negocio" 
             target="_blank"
             rel="noopener noreferrer"
             className="hidden md:flex items-center gap-2 bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition font-bold shadow-lg animate-pulse"

@@ -86,7 +86,7 @@ const FAQ = () => {
         <div className="text-center mt-12">
           <p className="text-gray-600 mb-4">¿Tienes otra pregunta?</p>
           <a 
-            href="https://wa.me/573001234567?text=Hola, tengo una pregunta sobre las landing pages"
+            href="https://wa.me/573113834058?text=Hola, tengo una pregunta sobre las landing pages"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-green-500 text-white px-8 py-3 rounded-lg hover:bg-green-600 transition font-semibold"
