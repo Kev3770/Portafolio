@@ -1,97 +1,172 @@
-import React from 'react';
-import { FaEnvelope, FaGithub, FaPaperPlane, FaUser, FaLinkedin } from 'react-icons/fa';
+import React, { useState } from 'react';
+import { FaWhatsapp, FaEnvelope, FaPhone } from 'react-icons/fa';
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    nombre: '',
+    negocio: '',
+    telefono: '',
+    paquete: 'Básico'
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    const mensaje = `Hola! Quiero cotizar una landing page
+    
+Nombre: ${formData.nombre}
+Negocio: ${formData.negocio}
+Teléfono: ${formData.telefono}
+Paquete de interés: ${formData.paquete}`;
+
+    const whatsappURL = `https://wa.me/573001234567?text=${encodeURIComponent(mensaje)}`;
+    window.open(whatsappURL, '_blank');
+  };
+
   return (
-    <section id="contacto" className="py-20 bg-gray-50">
+    <section id="contacto" className="py-20 bg-gradient-to-br from-primary to-secondary">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-dark mb-4">Contacto</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            ¿Tienes un proyecto en mente? Hablemos y hagámoslo realidad
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* Información de contacto */}
-          <div>
-            <h3 className="text-2xl font-bold text-dark mb-6">¡Hablemos!</h3>
-            <p className="text-gray-600 mb-8 leading-relaxed">
-              Estoy siempre abierto a discutir nuevos proyectos, ideas creativas u oportunidades para ser parte de tu visión.
-            </p>
-            
-            <div className="space-y-4">
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
-                  <FaEnvelope className="text-white text-xl" />
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Información motivacional */}
+            <div className="text-white">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                ¿Listo Para Hacer Crecer Tu Negocio?
+              </h2>
+              
+              <p className="text-xl mb-8 opacity-90 leading-relaxed">
+                En 3-5 días tu negocio puede tener una landing page profesional que genera clientes reales.
+              </p>
+
+              <div className="space-y-6 mb-8">
+                <div className="flex items-start gap-4">
+                  <div className="bg-white/20 p-3 rounded-lg">
+                    <FaWhatsapp className="text-2xl" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg mb-1">Respuesta Rápida</h3>
+                    <p className="opacity-90">Te respondo en menos de 2 horas</p>
+                  </div>
                 </div>
-                <div>
-                  <p className="font-semibold text-dark">Email</p>
-                  <a href="mailto:kpenaramirez145@gmail.com" className="text-gray-600 hover:text-primary transition">
-                    kpenaramirez145@gmail.com
-                  </a>
+
+                <div className="flex items-start gap-4">
+                  <div className="bg-white/20 p-3 rounded-lg">
+                    <FaPhone className="text-2xl" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg mb-1">Sin Compromiso</h3>
+                    <p className="opacity-90">Cotización gratis, sin obligación de compra</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="bg-white/20 p-3 rounded-lg">
+                    <FaEnvelope className="text-2xl" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg mb-1">Precios Claros</h3>
+                    <p className="opacity-90">Sabrás exactamente qué recibes y cuánto pagas</p>
+                  </div>
                 </div>
               </div>
-              
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center">
-                  <FaGithub className="text-white text-xl" />
-                </div>
-                <div>
-                  <p className="font-semibold text-dark">GitHub</p>
-                  <a 
-                    href="https://github.com/Kev3770" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-gray-600 hover:text-primary transition"
-                  >
-                    github.com/Kev3770
-                  </a>
-                </div>
+
+              <div className="bg-white/10 border-2 border-white/30 rounded-xl p-6">
+                <p className="font-bold text-lg mb-2">✓ Satisfacción Garantizada</p>
+                <p className="opacity-90">
+                  Si no estás contento con el resultado, trabajamos hasta que lo estés.
+                </p>
               </div>
             </div>
-          </div>
-          
-          {/* Formulario de contacto */}
-          <div className="bg-white rounded-xl p-8 shadow-lg">
-            <form className="space-y-6">
-              <div className="relative">
-                <FaUser className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
-                <input
-                  type="text"
-                  id="name"
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition"
-                  placeholder="Tu nombre completo"
-                />
-              </div>
-              
-              <div className="relative">
-                <FaEnvelope className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
-                <input
-                  type="email"
-                  id="email"
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition"
-                  placeholder="tu@email.com"
-                />
-              </div>
-              
-              <div>
-                <textarea
-                  id="message"
-                  rows="4"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition"
-                  placeholder="Cuéntame sobre tu proyecto..."
-                ></textarea>
-              </div>
-              
-              <button
-                type="submit"
-                className="w-full bg-primary text-white py-3 rounded-lg hover:bg-blue-700 transition font-semibold flex items-center justify-center space-x-2"
-              >
-                <FaPaperPlane />
-                <span>Enviar Mensaje</span>
-              </button>
-            </form>
+
+            {/* Formulario */}
+            <div className="bg-white rounded-2xl p-8 shadow-2xl">
+              <h3 className="text-3xl font-bold text-dark mb-6 text-center">
+                Cotiza Tu Proyecto
+              </h3>
+
+              <form onSubmit={handleSubmit} className="space-y-5">
+                <div>
+                  <label className="block text-gray-700 font-semibold mb-2">
+                    Tu Nombre *
+                  </label>
+                  <input
+                    type="text"
+                    name="nombre"
+                    value={formData.nombre}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none transition"
+                    placeholder="Juan Pérez"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-gray-700 font-semibold mb-2">
+                    Nombre de tu Negocio *
+                  </label>
+                  <input
+                    type="text"
+                    name="negocio"
+                    value={formData.negocio}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none transition"
+                    placeholder="Mi Barbería / Mi Tienda"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-gray-700 font-semibold mb-2">
+                    Tu Teléfono *
+                  </label>
+                  <input
+                    type="tel"
+                    name="telefono"
+                    value={formData.telefono}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none transition"
+                    placeholder="300 123 4567"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-gray-700 font-semibold mb-2">
+                    Paquete de Interés
+                  </label>
+                  <select
+                    name="paquete"
+                    value={formData.paquete}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none transition"
+                  >
+                    <option value="Básico">Básico - $150.000</option>
+                    <option value="Profesional">Profesional - $250.000</option>
+                    <option value="Premium">Premium - $350.000</option>
+                    <option value="No estoy seguro">No estoy seguro aún</option>
+                  </select>
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full bg-green-500 text-white py-4 rounded-lg hover:bg-green-600 transition font-bold text-lg flex items-center justify-center gap-3 shadow-lg"
+                >
+                  <FaWhatsapp className="text-2xl" />
+                  Enviar por WhatsApp
+                </button>
+              </form>
+
+              <p className="text-center text-gray-500 text-sm mt-4">
+                Te responderé en menos de 2 horas para darte una cotización exacta
+              </p>
+            </div>
           </div>
         </div>
       </div>
