@@ -1,0 +1,23 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo hexagonal moderno -->
+  <path d="M100 30L160 65V135L100 170L40 135V65L100 30Z" fill="url(#kevGradient)"/>
+  
+  <!-- K grande estilizada -->
+  <path d="M75 70V130M75 100L95 80M75 100L95 120" stroke="white" stroke-width="6" stroke-linecap="round"/>
+  
+  <!-- Número 3770 integrado de forma sutil -->
+  <circle cx="125" cy="85" r="3" fill="#06B6D4"/>
+  <circle cx="135" cy="95" r="3" fill="#06B6D4"/>
+  <circle cx="125" cy="105" r="3" fill="#06B6D4"/>
+  <circle cx="135" cy="115" r="3" fill="#06B6D4"/>
+  
+  <!-- Líneas de conexión que representan código -->
+  <path d="M100 50L120 65M100 150L120 135" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+  
+  <defs>
+    <linearGradient id="kevGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E40AF"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+  </defs>
+</svg>

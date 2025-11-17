@@ -1,0 +1,18 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo circular con gradiente -->
+  <circle cx="100" cy="100" r="90" fill="url(#gradient)"/>
+  
+  <!-- Letra K estilizada -->
+  <path d="M70 60V140M70 100L90 80M70 100L90 120" stroke="white" stroke-width="8" stroke-linecap="round"/>
+  
+  <!-- Letra P estilizada -->
+  <path d="M110 60V140M110 60H130C140 60 145 70 145 80C145 90 140 100 130 100H110" stroke="white" stroke-width="8" fill="none"/>
+  
+  <!-- Definición del gradiente -->
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E40AF"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+  </defs>
+</svg>

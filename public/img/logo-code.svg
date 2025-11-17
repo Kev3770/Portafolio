@@ -1,0 +1,17 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo hexagonal moderno -->
+  <path d="M100 30L160 65V135L100 170L40 135V65L100 30Z" fill="url(#gradient)"/>
+  
+  <!-- Símbolo de código -->
+  <path d="M75 90L60 100L75 110M125 90L140 100L125 110M95 80L105 120" stroke="white" stroke-width="6" stroke-linecap="round"/>
+  
+  <!-- Texto KP abajo -->
+  <text x="100" y="155" text-anchor="middle" fill="white" font-family="Arial" font-size="16" font-weight="bold">KPeña Dev</text>
+  
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E40AF"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+  </defs>
+</svg>

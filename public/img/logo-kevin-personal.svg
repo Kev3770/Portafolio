@@ -1,0 +1,28 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo circular con gradiente personalizado -->
+  <circle cx="100" cy="100" r="90" fill="url(#kevinGradient)"/>
+  
+  <!-- Diseño abstracto que forma una "K" y "P" entrelazadas -->
+  <!-- Forma principal que representa K -->
+  <path d="M70 60L70 140M70 100L95 75M70 100L95 125" stroke="white" stroke-width="8" stroke-linecap="round"/>
+  
+  <!-- Forma que representa P integrada con la K -->
+  <path d="M105 60L105 140M105 60L135 60L135 100L105 100" stroke="white" stroke-width="8" stroke-linecap="round" fill="none"/>
+  
+  <!-- Elemento de código que sale del centro -->
+  <path d="M100 100L120 85M100 100L120 115" stroke="#06B6D4" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- Punto de conexión personal -->
+  <circle cx="100" cy="100" r="6" fill="#06B6D4"/>
+  
+  <!-- Aro exterior que simboliza completitud -->
+  <circle cx="100" cy="100" r="85" stroke="white" stroke-width="2" fill="none" opacity="0.3"/>
+  
+  <defs>
+    <linearGradient id="kevinGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E40AF"/>
+      <stop offset="50%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+  </defs>
+</svg>

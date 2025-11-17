@@ -1,0 +1,31 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo circular que representa un planeta/tecnología -->
+  <circle cx="100" cy="100" r="85" fill="url(#personalGradient)"/>
+  
+  <!-- K central estilizada - tu inicial -->
+  <path d="M80 60V140M80 100L105 75M80 100L105 125" stroke="white" stroke-width="10" stroke-linecap="round"/>
+  
+  <!-- Anillo orbital con elementos de código -->
+  <circle cx="100" cy="100" r="60" stroke="#06B6D4" stroke-width="2" fill="none" opacity="0.6"/>
+  
+  <!-- Satélites/código orbitando -->
+  <circle cx="160" cy="100" r="8" fill="#06B6D4">
+    <animateTransform attributeName="transform" type="rotate" from="0 100 100" to="360 100 100" dur="10s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Puntos de datos/orbitas adicionales -->
+  <circle cx="100" cy="40" r="4" fill="white" opacity="0.7"/>
+  <circle cx="140" cy="140" r="4" fill="white" opacity="0.7"/>
+  <circle cx="60" cy="140" r="4" fill="white" opacity="0.7"/>
+  
+  <!-- Líneas de conexión que representan redes -->
+  <path d="M100 100L160 100M100 100L100 40M100 100L140 140M100 100L60 140" stroke="white" stroke-width="1" opacity="0.3"/>
+
+  <defs>
+    <linearGradient id="personalGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E40AF"/>
+      <stop offset="50%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#1E40AF"/>
+    </linearGradient>
+  </defs>
+</svg>
