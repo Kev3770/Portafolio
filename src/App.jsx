@@ -2,10 +2,12 @@ import React from 'react';
 import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
 import Services from './components/Services/Services';
+import LaunchOffer from './components/LaunchOffer/LaunchOffer';
 import Technologies from './components/Technologies/Technologies';
 import Portfolio from './components/Portfolio/Portfolio';
 import Pricing from './components/Pricing/Pricing';
 import Process from './components/Process/Process'; 
+import FAQ from './components/FAQ/FAQ';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 
@@ -15,10 +17,12 @@ function App() {
       <Header />
       <Hero />
       <Services />
+      <LaunchOffer />
       <Technologies />
       <Portfolio />
-       <Pricing />
+      <Pricing />
       <Process />
+      <FAQ />
       <Contact />
       <Footer />
     </div>
